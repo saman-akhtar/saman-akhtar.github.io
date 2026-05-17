@@ -1,1 +1,635 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Web site created using create-react-app"/><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/><link rel="apple-touch-icon" href="/logo192.png"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/><link rel="manifest" href="/manifest.json"/><title>React App</title><link href="/static/css/2.0ac6c247.chunk.css" rel="stylesheet"><link href="/static/css/main.5f361e03.chunk.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script>!function(e){function r(r){for(var n,f,l=r[0],i=r[1],a=r[2],c=0,s=[];c<l.length;c++)f=l[c],Object.prototype.hasOwnProperty.call(o,f)&&o[f]&&s.push(o[f][0]),o[f]=0;for(n in i)Object.prototype.hasOwnProperty.call(i,n)&&(e[n]=i[n]);for(p&&p(r);s.length;)s.shift()();return u.push.apply(u,a||[]),t()}function t(){for(var e,r=0;r<u.length;r++){for(var t=u[r],n=!0,l=1;l<t.length;l++){var i=t[l];0!==o[i]&&(n=!1)}n&&(u.splice(r--,1),e=f(f.s=t[0]))}return e}var n={},o={1:0},u=[];function f(r){if(n[r])return n[r].exports;var t=n[r]={i:r,l:!1,exports:{}};return e[r].call(t.exports,t,t.exports,f),t.l=!0,t.exports}f.m=e,f.c=n,f.d=function(e,r,t){f.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},f.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},f.t=function(e,r){if(1&r&&(e=f(e)),8&r)return e;if(4&r&&"object"==typeof e&&e&&e.__esModule)return e;var t=Object.create(null);if(f.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:e}),2&r&&"string"!=typeof e)for(var n in e)f.d(t,n,function(r){return e[r]}.bind(null,n));return t},f.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return f.d(r,"a",r),r},f.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},f.p="/";var l=this.webpackJsonpfrontend=this.webpackJsonpfrontend||[],i=l.push.bind(l);l.push=r,l=l.slice();for(var a=0;a<l.length;a++)r(l[a]);var p=i;t()}([])</script><script src="/static/js/2.63076a75.chunk.js"></script><script src="/static/js/main.17e415f0.chunk.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saman Akhtar — Senior Software Engineer</title>
+  <meta name="description" content="Senior Software Engineer specializing in distributed systems, cloud infrastructure, and multi-tenant SaaS platforms." />
+  <meta property="og:title" content="Saman Akhtar — Senior Software Engineer" />
+  <meta property="og:description" content="8+ years building distributed systems, GraphQL APIs, and multi-tenant SaaS platforms." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f1117;
+      --bg2: #161b27;
+      --bg3: #1e2436;
+      --accent: #00d2ff;
+      --accent2: #0099cc;
+      --green: #00e599;
+      --text: #e2e8f0;
+      --muted: #8892a4;
+      --border: rgba(0, 210, 255, 0.12);
+      --radius: 12px;
+      --font: 'Inter', system-ui, sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--green); }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(15, 17, 23, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-family: var(--mono); font-size: 0.9rem; color: var(--accent); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.85rem; color: var(--muted); font-weight: 500; letter-spacing: 0.03em; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      padding: 6rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0, 210, 255, 0.08) 0%, transparent 70%),
+                  radial-gradient(ellipse 40% 40% at 80% 80%, rgba(0, 229, 153, 0.05) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .grid-bg {
+      position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(0,210,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,210,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .hero-content { position: relative; max-width: 800px; }
+    .hero-tag {
+      font-family: var(--mono); font-size: 0.8rem; color: var(--accent);
+      letter-spacing: 0.1em; margin-bottom: 1.2rem;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .hero-tag::before {
+      content: '';
+      display: inline-block; width: 24px; height: 1px;
+      background: var(--accent);
+    }
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 700; line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      color: var(--muted); font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+    .hero-sub span { color: var(--accent); font-weight: 500; }
+    .hero-desc {
+      font-size: 1.05rem; color: var(--muted);
+      max-width: 600px; margin-bottom: 2.5rem; line-height: 1.7;
+    }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.75rem 1.5rem; border-radius: 8px;
+      font-size: 0.9rem; font-weight: 600; cursor: pointer;
+      transition: all 0.2s; border: none;
+    }
+    .btn-primary {
+      background: var(--accent); color: #0f1117;
+    }
+    .btn-primary:hover { background: var(--green); color: #0f1117; }
+    .btn-outline {
+      background: transparent; color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); background: rgba(0,210,255,0.05); }
+
+    /* ── STATS ── */
+    .stats {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      overflow: hidden; margin-top: 3rem;
+    }
+    .stat {
+      background: var(--bg2); padding: 1.5rem 1.2rem;
+      text-align: center;
+    }
+    .stat-value {
+      font-size: 2rem; font-weight: 700;
+      color: var(--accent); font-family: var(--mono);
+      display: block; margin-bottom: 0.25rem;
+    }
+    .stat-label { font-size: 0.78rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+
+    /* ── SECTION COMMON ── */
+    section { padding: 5rem 2rem; max-width: 1000px; margin: 0 auto; }
+    .section-label {
+      font-family: var(--mono); font-size: 0.75rem; color: var(--accent);
+      letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700;
+      letter-spacing: -0.02em; margin-bottom: 0.5rem;
+    }
+    .section-line {
+      width: 40px; height: 2px; background: var(--accent); margin-bottom: 2.5rem;
+    }
+
+    /* ── SKILLS ── */
+    .skills-grid { display: flex; flex-direction: column; gap: 1.2rem; }
+    .skill-row { display: flex; gap: 0.75rem; align-items: baseline; flex-wrap: wrap; }
+    .skill-cat {
+      font-family: var(--mono); font-size: 0.72rem; color: var(--accent);
+      min-width: 120px; letter-spacing: 0.05em;
+    }
+    .skill-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .chip {
+      font-size: 0.78rem; padding: 0.25rem 0.65rem;
+      background: var(--bg3); border: 1px solid var(--border);
+      border-radius: 6px; color: var(--text);
+      transition: all 0.2s;
+    }
+    .chip:hover { border-color: var(--accent); color: var(--accent); background: rgba(0,210,255,0.05); }
+    .chip.hot { border-color: rgba(0,210,255,0.3); color: var(--accent); }
+
+    /* ── EXPERIENCE ── */
+    .timeline { display: flex; flex-direction: column; gap: 0; }
+    .tl-item {
+      display: grid; grid-template-columns: 120px 1fr;
+      gap: 0 2rem; position: relative;
+    }
+    .tl-item + .tl-item { margin-top: 0; }
+    .tl-date {
+      font-family: var(--mono); font-size: 0.72rem; color: var(--muted);
+      padding-top: 1.6rem; text-align: right; line-height: 1.4;
+    }
+    .tl-right {
+      padding: 1.5rem 0 2rem 2rem;
+      border-left: 1px solid var(--border);
+      position: relative;
+    }
+    .tl-right::before {
+      content: '';
+      position: absolute; left: -5px; top: 2rem;
+      width: 9px; height: 9px; border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 3px rgba(0,210,255,0.15);
+    }
+    .tl-company { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.1rem; }
+    .tl-role { font-size: 0.85rem; color: var(--accent); font-weight: 500; margin-bottom: 0.75rem; }
+    .tl-bullets { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.4rem; }
+    .tl-bullets li {
+      font-size: 0.88rem; color: var(--muted); padding-left: 1rem; position: relative;
+    }
+    .tl-bullets li::before {
+      content: '›'; position: absolute; left: 0; color: var(--accent);
+    }
+    .tl-bullets strong { color: var(--text); }
+
+    /* ── PROJECTS ── */
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .project-card {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.5rem;
+      transition: all 0.25s; position: relative; overflow: hidden;
+    }
+    .project-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--green));
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.3s;
+    }
+    .project-card:hover { border-color: rgba(0,210,255,0.3); transform: translateY(-3px); }
+    .project-card:hover::before { transform: scaleX(1); }
+    .project-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    .project-name { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .project-desc { font-size: 0.85rem; color: var(--muted); margin-bottom: 1rem; line-height: 1.6; }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .tag {
+      font-size: 0.7rem; padding: 0.2rem 0.5rem;
+      background: rgba(0,210,255,0.08); border: 1px solid rgba(0,210,255,0.15);
+      border-radius: 4px; color: var(--accent); font-family: var(--mono);
+    }
+
+    /* ── CONTACT ── */
+    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; }
+    .contact-item {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.25rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+      transition: all 0.2s;
+    }
+    .contact-item:hover { border-color: var(--accent); background: rgba(0,210,255,0.04); }
+    .contact-icon { font-size: 1.4rem; }
+    .contact-label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.1rem; }
+    .contact-val { font-size: 0.9rem; font-weight: 500; }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center; padding: 2rem;
+      font-size: 0.78rem; color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── ANIMATIONS ── */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      nav { padding: 1rem; }
+      .nav-links { gap: 1rem; }
+      .tl-item { grid-template-columns: 1fr; }
+      .tl-date { text-align: left; padding-top: 0; padding-bottom: 0.25rem; }
+      .tl-right { padding-left: 1rem; }
+      .skill-cat { min-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">saman.dev</div>
+    <ul class="nav-links">
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="grid-bg"></div>
+    <div class="hero-content">
+      <div class="hero-tag">Senior Software Engineer</div>
+      <h1>Saman Akhtar</h1>
+      <div class="hero-sub">Building <span>distributed systems</span> that scale.</div>
+      <p class="hero-desc">
+        8+ years designing cloud infrastructure, GraphQL APIs, and multi-tenant SaaS platforms.
+        From Temporal.io workflow engines to Kubernetes-orchestrated microservices — I build the
+        backend that lets teams move fast safely.
+      </p>
+      <div class="hero-ctas">
+        <a href="https://linkedin.com/in/saman-akhtar-190340112" class="btn btn-primary" target="_blank">LinkedIn</a>
+        <a href="https://github.com/saman-akhtar" class="btn btn-outline" target="_blank">GitHub</a>
+        <a href="mailto:samana@usc.edu" class="btn btn-outline">Email Me</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-value">99.9%</span>
+          <span class="stat-label">API latency reduction</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">40+</span>
+          <span class="stat-label">Enterprise clients</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">7</span>
+          <span class="stat-label">Engineers led</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">8+</span>
+          <span class="stat-label">Years experience</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">650GB</span>
+          <span class="stat-label">Storage reclaimed</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <section id="skills" class="fade-in">
+    <div class="section-label">// expertise</div>
+    <h2>Technical Skills</h2>
+    <div class="section-line"></div>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <div class="skill-cat">Languages</div>
+        <div class="skill-chips">
+          <span class="chip hot">Python</span>
+          <span class="chip hot">TypeScript</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">Java</span>
+        </div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-cat">APIs &amp; Data</div>
+        <div class="skill-chips">
+          <span class="chip hot">GraphQL</span>
+          <span class="chip hot">REST APIs</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">Express.js</span>
+          <span class="chip">Flask</span>
+          <span class="chip">Microservices</span>
+        </div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-cat">Distributed</div>
+        <div class="skill-chips">
+          <span class="chip hot">Temporal.io</span>
+          <span class="chip hot">BullMQ</span>
+          <span class="chip">Kafka</span>
+          <span class="chip">Event-driven arch</span>
+        </div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-cat">Databases</div>
+        <div class="skill-chips">
+          <span class="chip hot">PostgreSQL</span>
+          <span class="chip hot">Redis</span>
+          <span class="chip">MongoDB</span>
+          <span class="chip">AWS DocumentDB</span>
+          <span class="chip">TypeORM</span>
+        </div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-cat">Cloud &amp; Infra</div>
+        <div class="skill-chips">
+          <span class="chip hot">AWS</span>
+          <span class="chip hot">Kubernetes</span>
+          <span class="chip hot">Docker</span>
+          <span class="chip">CI/CD Pipelines</span>
+          <span class="chip">Jenkins</span>
+          <span class="chip">Azure</span>
+          <span class="chip">GCP</span>
+        </div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-cat">Observability</div>
+        <div class="skill-chips">
+          <span class="chip">Grafana</span>
+          <span class="chip">Prometheus</span>
+          <span class="chip">SonarQube</span>
+          <span class="chip">Burp Suite</span>
+          <span class="chip">JWT / OAuth</span>
+        </div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-cat">Frontend</div>
+        <div class="skill-chips">
+          <span class="chip">Angular</span>
+          <span class="chip">RxJS</span>
+          <span class="chip">HTML5</span>
+          <span class="chip">CSS3</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="fade-in">
+    <div class="section-label">// career</div>
+    <h2>Experience</h2>
+    <div class="section-line"></div>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-date">Feb 2023<br/>Present</div>
+        <div class="tl-right">
+          <div class="tl-company">Scry AI</div>
+          <div class="tl-role">Senior Software Engineer — San Jose, CA</div>
+          <ul class="tl-bullets">
+            <li>Designed a <strong>Knowledge Graph pipeline</strong> using Temporal.io workflows — extracted entities stored in a <strong>GraphQL API layer</strong>, accelerating NLP retrieval by ~60%</li>
+            <li>Reduced API response times from 5s to <strong>3ms (99.9%)</strong> via Redis caching redesign; owned Grafana/Prometheus post-incident dashboards</li>
+            <li>Led consolidation of 10+ legacy services into a unified <strong>multi-tenant SaaS platform</strong> on Kubernetes — 40+ enterprise clients</li>
+            <li>Refactored cloud-agnostic <strong>CI/CD scripts</strong> cutting deploy rollout time by 40%, eliminating configuration drift</li>
+            <li>Hardened security via Burp Suite audit — JWT/HTTP-only cookies, X-Frame-Options, CSRF protections</li>
+            <li><strong>Led and mentored 7 engineers</strong> across the U.S. and India — design reviews, pre-commit hooks, SonarQube enforcement</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-date">May 2022<br/>Jan 2023</div>
+        <div class="tl-right">
+          <div class="tl-company">Scry AI</div>
+          <div class="tl-role">Software Engineer Co-Op</div>
+          <ul class="tl-bullets">
+            <li>Built a <strong>self-serve parser platform</strong> in TypeScript/Node.js — teams authored, versioned, and rolled back parsers without backend deployments</li>
+            <li>Led zero-downtime data migration from MongoDB to <strong>PostgreSQL</strong> via TypeORM for invoice reconciliation workflows</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-date">Jul 2017<br/>Jan 2021</div>
+        <div class="tl-right">
+          <div class="tl-company">Fidelity Investments</div>
+          <div class="tl-role">Software Engineer — Bangalore, India</div>
+          <ul class="tl-bullets">
+            <li>Developed the <strong>Portfolio Construction Tool</strong> — Angular + Java, deployed across 6+ business teams</li>
+            <li>Built a <strong>Python automation framework</strong> reducing Windows 10 migration from 4 weeks to 5 days for 100+ users</li>
+            <li>Served as <strong>Scrum Master</strong> for distributed engineering team</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-date">Jan 2017<br/>Jun 2017</div>
+        <div class="tl-right">
+          <div class="tl-company">Motorola Mobility</div>
+          <div class="tl-role">Mobile Development Intern — Bangalore, India</div>
+          <ul class="tl-bullets">
+            <li>Built an Android diagnostic app monitoring CPU/memory usage and surfacing real-time performance recommendations</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="fade-in">
+    <div class="section-label">// work</div>
+    <h2>Projects</h2>
+    <div class="section-line"></div>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-icon">⚙️</div>
+        <div class="project-name">Temporal.io Workflow Engine</div>
+        <div class="project-desc">Fault-tolerant distributed workflow orchestration for enterprise AI data pipelines — durable state, automated retries, end-to-end traceability. Served 40+ enterprise clients.</div>
+        <div class="project-tags">
+          <span class="tag">Temporal.io</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Kubernetes</span>
+          <span class="tag">AWS</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">🔗</div>
+        <div class="project-name">Knowledge Graph + GraphQL Pipeline</div>
+        <div class="project-desc">Designed an entity extraction pipeline using Temporal.io workflows. Extracted entities and relationships stored in a GraphQL API layer, enabling semantic querying across document corpus. NLP retrieval accelerated by 60%.</div>
+        <div class="project-tags">
+          <span class="tag">GraphQL</span>
+          <span class="tag">Temporal.io</span>
+          <span class="tag">Python</span>
+          <span class="tag">NLP</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">🏗️</div>
+        <div class="project-name">Multi-Tenant SaaS Platform</div>
+        <div class="project-desc">Consolidated 10+ legacy services into a unified platform on Kubernetes. Owned architecture, API contracts, and rollout. Redis caching cut API response times from 5s to 3ms.</div>
+        <div class="project-tags">
+          <span class="tag">Node.js</span>
+          <span class="tag">Redis</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Kubernetes</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">🛠️</div>
+        <div class="project-name">Self-Serve Parser Platform</div>
+        <div class="project-desc">Sandboxed parser execution platform in TypeScript/Node.js. Teams authored, versioned, tested, and rolled back document parsers independently — zero backend deployments required.</div>
+        <div class="project-tags">
+          <span class="tag">TypeScript</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Sandboxing</span>
+          <span class="tag">REST</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">📊</div>
+        <div class="project-name">Sentiment Analysis Dashboard</div>
+        <div class="project-desc">Real-time web app to retrieve tweets, analyze sentiment using NLP, and visualize results in a JWT-secured dashboard with a GraphQL query interface.</div>
+        <div class="project-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Flask</span>
+          <span class="tag">GraphQL</span>
+          <span class="tag">NLP</span>
+          <span class="tag">Angular</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">🎯</div>
+        <div class="project-name">Logo Detection &amp; Ad Placement</div>
+        <div class="project-desc">Video analysis algorithm identifying brand placements in video streams and triggering contextually targeted advertisements using Google Cloud Vision API.</div>
+        <div class="project-tags">
+          <span class="tag">Java</span>
+          <span class="tag">Google Cloud Vision</span>
+          <span class="tag">Computer Vision</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="fade-in" style="padding-top: 0;">
+    <div class="section-label">// education</div>
+    <h2>Education</h2>
+    <div class="section-line"></div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">2021 – 2022</div>
+        <div class="tl-right">
+          <div class="tl-company">University of Southern California (USC)</div>
+          <div class="tl-role">M.S. Computer Science · Viterbi School of Engineering · GPA 3.52</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2013 – 2017</div>
+        <div class="tl-right">
+          <div class="tl-company">The National Institute of Engineering, Mysore</div>
+          <div class="tl-role">B.E. Computer Science · Rank 3 / 200 · GPA 9.3/10</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="fade-in">
+    <div class="section-label">// connect</div>
+    <h2>Get In Touch</h2>
+    <div class="section-line"></div>
+    <p style="color: var(--muted); margin-bottom: 1.5rem; max-width: 500px;">
+      Currently open to senior backend, platform, and fullstack engineering roles (remote).
+      H-1B — open to sponsorship.
+    </p>
+    <div class="contact-grid">
+      <a href="mailto:samana@usc.edu" class="contact-item">
+        <div class="contact-icon">✉️</div>
+        <div>
+          <div class="contact-label">Email</div>
+          <div class="contact-val">samana@usc.edu</div>
+        </div>
+      </a>
+      <a href="https://linkedin.com/in/saman-akhtar-190340112" target="_blank" class="contact-item">
+        <div class="contact-icon">💼</div>
+        <div>
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-val">saman-akhtar</div>
+        </div>
+      </a>
+      <a href="https://github.com/saman-akhtar" target="_blank" class="contact-item">
+        <div class="contact-icon">🐙</div>
+        <div>
+          <div class="contact-label">GitHub</div>
+          <div class="contact-val">saman-akhtar</div>
+        </div>
+      </a>
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div>
+          <div class="contact-label">Location</div>
+          <div class="contact-val">San Jose, CA (PT)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Built with HTML &amp; CSS · Saman Akhtar © 2025
+  </footer>
+
+  <script>
+    // Intersection observer for fade-in animations
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } }),
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Active nav link highlight
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+      let cur = '';
+      sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) cur = s.id; });
+      navLinks.forEach(a => {
+        a.style.color = a.getAttribute('href') === '#' + cur ? 'var(--text)' : '';
+      });
+    });
+  </script>
+</body>
+</html>
