@@ -413,12 +413,19 @@
           <div class="tl-company">Scry AI</div>
           <div class="tl-role">Senior Software Engineer — San Jose, CA</div>
           <ul class="tl-bullets">
-            <li>Designed a <strong>Knowledge Graph pipeline</strong> using Temporal.io workflows — extracted entities stored in a <strong>GraphQL API layer</strong>, accelerating NLP retrieval by ~60%</li>
-            <li>Reduced API response times from 5s to <strong>3ms (99.9%)</strong> via Redis caching redesign; owned Grafana/Prometheus post-incident dashboards</li>
-            <li>Led consolidation of 10+ legacy services into a unified <strong>multi-tenant SaaS platform</strong> on Kubernetes — 40+ enterprise clients</li>
-            <li>Refactored cloud-agnostic <strong>CI/CD scripts</strong> cutting deploy rollout time by 40%, eliminating configuration drift</li>
-            <li>Hardened security via Burp Suite audit — JWT/HTTP-only cookies, X-Frame-Options, CSRF protections</li>
-            <li><strong>Led and mentored 7 engineers</strong> across the U.S. and India — design reviews, pre-commit hooks, SonarQube enforcement</li>
+            <li>Designed a <strong>Knowledge Graph + Embeddings pipeline</strong> using Temporal.io workflows — extracted entities and relationships stored in a <strong>GraphQL API layer</strong>, accelerating NLP retrieval by <strong>~60%</strong></li>
+            <li>Architected a scalable <strong>Temporal.io workflow orchestration engine</strong> for high-throughput, long-running document pipelines — fault tolerance, automated retries, and end-to-end traceability for mission-critical AI data processing</li>
+            <li>Optimized caching with <strong>Redis</strong> — reduced backend queries by 60%, cut API response times from 5s to <strong>3ms (99.9% improvement)</strong>; owned Grafana/Prometheus post-incident dashboards</li>
+            <li>Enhanced backend performance by restructuring DB queries from code-level loops to aggregate queries, reducing processing time by <strong>64%</strong></li>
+            <li>Designed and shipped a <strong>non-blocking bulk document download manager</strong> in Node.js — async queue with real-time notifications and ZIP-packaged outputs</li>
+            <li>Built a <strong>multi-app assembler in Python</strong> with loosely coupled middleware enabling plug-and-play document processing and seamless model integration</li>
+            <li>Led consolidation of 10+ team UIs into a single <strong>multi-tenant SuperApp (Collatio IDP)</strong> on Kubernetes — owned architecture, API contracts, rollout across 40+ enterprise clients</li>
+            <li>Designed a scalable <strong>credit-based billing system</strong> integrating inventory selection with user plans — real-time credit deductions for multi-tenant SaaS customers</li>
+            <li>Engineered an <strong>EFS Cleanup Utility</strong> with retention-aware garbage collection across multi-tenant environments — reclaimed <strong>650 GB+</strong> of storage, preventing disk-full incidents</li>
+            <li>Refactored cloud-agnostic <strong>CI/CD scripts</strong> for one-click deployments to AWS EC2 and on-premise Azure — cut rollout time by <strong>~40%</strong>, eliminated configuration drift</li>
+            <li>Hardened application security via Burp Suite and SonarQube — remediated X-Frame-Options, CSRF protections, <strong>JWT/HTTP-only cookie auth</strong></li>
+            <li>Facilitated enterprise client onboarding by migrating from MongoDB to a database-agnostic architecture (<strong>TypeORM</strong>), enabling PostgreSQL and Oracle compatibility</li>
+            <li><strong>Led a cross-functional team of 7 engineers</strong> across U.S. and India — enforced code quality via pre-commit hooks, CI/CD linting, design reviews, and async-first engineering culture</li>
           </ul>
         </div>
       </div>
